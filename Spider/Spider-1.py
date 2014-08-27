@@ -3,8 +3,6 @@
 import urllib,urllib2
 import re
 import cookielib
-import time  
-starttime = time.clock() 
 
 CardNum = re.compile('<span\s+?id="ctl00_ContentPlaceHolder1_lblCardNum">(?P<content>.+?)</span>')
 Name = re.compile('<span\s+?id="ctl00_ContentPlaceHolder1_lblName">(?P<content>.+?)</span>')
