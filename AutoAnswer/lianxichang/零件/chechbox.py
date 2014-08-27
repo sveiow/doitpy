@@ -25,7 +25,7 @@ def savepic(boxname,filename):
     fullsc.crop(boxname).save(filename,'JPEG')
 
 Qbox = (515,470,1020,488);savepic(Qbox,'checking/Qbox.jpg');
-Q2box = (860,500,1050,655);savepic(Q2box,'checking/Qbox2.jpg');
+Q2box = (860,505,1050,655);savepic(Q2box,'checking/Qbox2.jpg');
 Abox = (510,564,840,586);savepic(Abox,'checking/Abox.jpg');
 Bbox = (510,590,840,612);savepic(Bbox,'checking/Bbox.jpg');
 Cbox = (510,617,840,639);savepic(Cbox,'checking/Cbox.jpg');
