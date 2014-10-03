@@ -23,7 +23,7 @@ class getit():
         read = 爬取地址
 
         agent = 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:30.0) Gecko/20100101 Firefox/30.0'
-        postdata = {'__VIEWSTATE' : '/wEPDwUKLTQwMzQ5MzE4OA9kFgJmD2QWAgIDD2QWAmYPZBYCAgMPFgIeC18hSXRlbUNvdW50AgEWAmYPZBYCZg8VBCIuLi9OZXdzX05DL0pEVDBISjY2ODY2VlRGNDZfMS5odG1sOjfmnIjpopjlupPljYfnuqfvvIznp5Hnm67kuIDlkoznp5Hnm67kuInlkITmlrDlop4xMDDpgZPpophRPGZvbnQgY29sb3I9cmVkPjfmnIjpopjlupPljYfnuqfvvIznp5Hnm67kuIDlkoznp5Hnm67kuInlkITmlrDlop4xMDDpgZPpopg8L2ZvbnQ+CTIwMTQvNy8zMWRk',
+        postdata = {'__VIEWSTATE' : '',     #此值会变，需捉取POST
                     'ctl00$ContentPlaceHolder1$LoginView1$Login1$UserName' : account,
                     'ctl00$ContentPlaceHolder1$LoginView1$Login1$Password' : '123456',
                     'ctl00$ContentPlaceHolder1$LoginView1$Login1$BtnLogin' : ''}
