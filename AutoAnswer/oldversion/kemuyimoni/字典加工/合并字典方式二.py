@@ -11,9 +11,9 @@ def updata(self,hashdic):
 
 def main(dict1,dict2,hashname,new):
     try:
-        updata(dict1,hashname)
+        updata(dict1,hashname)      #载入
         print len(hashname)
-        updata(dict2,hashname)
+        updata(dict2,hashname)      #覆盖
         print len(hashname)
 
         with open(new, 'wb') as output:
@@ -22,7 +22,7 @@ def main(dict1,dict2,hashname,new):
     except IOError:
         pass
 
-os.rename('DictS.K','DictS.kmy')
-os.rename('DictP.K','DictP.kmy')
-main('DictS.kmy','oneDictS.kmy',hashdataS,'DictS.K')
-main('DictP.kmy','oneDictP.kmy',hashdataP,'DictP.K')
+os.rename('DictS.K','DictS.old')
+os.rename('DictP.K','DictP.old')
+main('DictS.old','oneDictS.kmy',hashdataS,'DictS.K')
+main('DictP.old','oneDictP.kmy',hashdataP,'DictP.K')
