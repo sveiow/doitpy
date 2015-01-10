@@ -1,12 +1,12 @@
 #coding=utf-8
 #介紹：删除special文件夹下的图片在字典1中的MD5值，使其向字典2查询
-import pickle
+import cPickle
 import os
 import hashlib
 
 def loadict(filename):
     output = open(filename, 'rb')
-    data = pickle.load(output)
+    data = cPickle.load(output)
     output.close()
     return data
 
@@ -31,7 +31,7 @@ for files in os.listdir(dirpath):
     
 print 'after del:%s'%len(hashdata)
 with open('DictS.Km', 'wb') as output:
-    pickle.dump(hashdata, output)
+    cPickle.dump(hashdata, output)
 output.close()
 
 #删除字典2的空白值
@@ -42,7 +42,7 @@ try :
     print len(dict2)
 
     with open('hashdata_dict2.pkl', 'wb') as output2:
-        pickle.dump(dict2, output2)
+        cPickle.dump(dict2, output2)
     output.close()
 except:
     pass

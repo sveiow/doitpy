@@ -101,7 +101,9 @@ def Answer():
             logging.info('no answer in DictP,no answer in all dicts')
 
     Pmd5 = PicHash(LXC.Pcbox,'Process.jpg')
-    if Pmd5 != LXC.Pcmd5 :
+    if Pmd5 == LXC.Pcmd5 or Pmd5 == LXC.Pwebdelay:
+        pass
+    else:
         clickClient(getbrow,LXC.Next)
         Answer()
 
@@ -168,7 +170,7 @@ def AutoAnswer():
     global fullsc
     fullsc = ImageGrab.grab()
     Buttunmd5 = PicHash(LXC.Button,'Button.JPG')
-    if Buttunmd5 != LXC.ButtunBlank:
+    if Buttunmd5 == LXC.Bwebdelay or Buttunmd5 == LXC.ButtunT:  #==LXC.ButtunT为非贪婪模式，!=ButtunBlank时为贪婪模式
         clickClient(getbrow,LXC.BT2)          #練習下一個知識點
         AutoAnswer()
     else:
@@ -178,7 +180,7 @@ def AutoAnswer():
 def Pickit():
     Pick()
     Pmd5 = PicHash(LXC.Pcbox,'Process.jpg')
-    if Pmd5 != LXC.Pcmd5 :
+    if Pmd5 != LXC.Pcmd5:
         clickClient(getbrow,LXC.Next)
         Pickit()            #查题循环
     else:
